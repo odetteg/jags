@@ -1,0 +1,10 @@
+host: sgodette.local
+Building DAG of jobs...
+MissingInputException in rule fastqc in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 4:
+Missing input files for rule fastqc:
+    output: results/fastqc/ERR246975_R1_fastqc.html, results/fastqc/ERR246969_R1_fastqc.html, results/fastqc/ERR246975_R1_fastqc.zip, results/fastqc/ERR246969_R1_fastqc.zip, results/fastqc/ERR246975_R2_fastqc.html, results/fastqc/ERR246969_R2_fastqc.html, results/fastqc/ERR246975_R2_fastqc.zip, results/fastqc/ERR246969_R2_fastqc.zip, /Users/sg/Documents/micromake/results/fastqc
+    affected files:
+        /Users/sg/Documents/micromake/results/ERR246969_R2.fastq
+        /Users/sg/Documents/micromake/results/ERR246975_R2.fastq
+        /Users/sg/Documents/micromake/results/ERR246969_R1.fastq
+        /Users/sg/Documents/micromake/results/ERR246975_R1.fastq

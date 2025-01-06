@@ -1,0 +1,5 @@
+host: sgodette.local
+Building DAG of jobs...
+WildcardError in rule all in file /Users/sg/Documents/micromake/Snakefile, line 4:
+Wildcards in input files cannot be determined from output files: (rule all, line 8, /Users/sg/Documents/micromake/Snakefile)
+'format'

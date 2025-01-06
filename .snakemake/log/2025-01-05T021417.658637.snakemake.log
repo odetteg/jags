@@ -1,0 +1,94 @@
+host: sgodette.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+fastp            1
+fastqc           1
+laod_data        6
+total            9
+
+Select jobs to execute...
+Execute 6 jobs...
+
+[Sun Jan  5 02:14:17 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq
+    jobid: 4
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq
+    wildcards: sample=ERR246969_R1.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:14:17 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq
+    jobid: 5
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq
+    wildcards: sample=ERR246969_R2.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:14:17 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz
+    jobid: 6
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz
+    wildcards: sample=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:14:17 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq
+    jobid: 2
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq
+    wildcards: sample=ERR246975_R1.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:14:17 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz
+    jobid: 7
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz
+    wildcards: sample=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:14:17 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq
+    jobid: 3
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq
+    wildcards: sample=ERR246975_R2.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule laod_data in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 5:
+Job 3  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq (missing locally, parent dir contents: ERR3077932_2.fastq.gz.2, ERR3077932_R2.fastq.gz, ftp:, ERR3077932_R1.fastq.gz, ERR3077932_2.fastq.gz.1)
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule laod_data in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 5:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq (missing locally, parent dir contents: ERR3077932_2.fastq.gz.2, ERR3077932_R2.fastq.gz, ftp:, ERR3077932_R1.fastq.gz, ERR3077932_2.fastq.gz.1)
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule laod_data in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 5:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz (missing locally, parent dir contents: )
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule laod_data in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 5:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq (missing locally, parent dir contents: ERR3077932_2.fastq.gz.2, ERR3077932_R2.fastq.gz, ftp:, ERR3077932_R1.fastq.gz, ERR3077932_2.fastq.gz.1)
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule laod_data in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 5:
+Job 5  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq (missing locally, parent dir contents: ERR3077932_2.fastq.gz.2, ERR3077932_R2.fastq.gz, ftp:, ERR3077932_R1.fastq.gz, ERR3077932_2.fastq.gz.1)
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule laod_data in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 5:
+Job 7  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz (missing locally, parent dir contents: )
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-01-05T021417.658637.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

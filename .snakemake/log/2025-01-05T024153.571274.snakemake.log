@@ -1,0 +1,72 @@
+host: sgodette.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+fastp                 1
+fastqc                1
+get_fastp_cmds        1
+laod_data             1
+total                 5
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Jan  5 02:41:53 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR3077932_R1.fastq.gz, /Users/sg/Documents/micromake/results/data/ERR3077932_R2.fastq.gz
+    jobid: 2
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR3077932_R1.fastq.gz, /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR3077932_R2.fastq.gz
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:41:53 2025]
+localrule get_fastp_cmds:
+    output: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    jobid: 4
+    reason: Missing output files: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 02:41:53 2025]
+Finished job 4.
+1 of 5 steps (20%) done
+[Sun Jan  5 02:48:49 2025]
+Finished job 2.
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Jan  5 02:48:49 2025]
+Job 1: Running FASTQC with on /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq /Users/sg/Documents/micromake/results/data/ERR3077932_R1.fastq.gz /Users/sg/Documents/micromake/results/data/ERR3077932_R2.fastq.gz
+Reason: Missing output files: results/fastqc/ERR3077932_2.fastq.gz_R1_fastqc.html, results/fastqc/ERR3077932_1.fastq.gz_R1_fastqc.zip, results/fastqc/ERR3077932_2.fastq.gz_R1_fastqc.zip, results/fastqc/ERR3077932_2.fastq.gz_R2_fastqc.html, results/fastqc/ERR246975_R1_fastqc.html, results/fastqc/ERR3077932_1.fastq.gz_R2_fastqc.zip, results/fastqc/ERR246975_R1_fastqc.zip, results/fastqc/ERR246969_R1_fastqc.html, results/fastqc/ERR246975_R2_fastqc.zip, results/fastqc/ERR246969_R2_fastqc.html, results/fastqc/ERR3077932_2.fastq.gz_R2_fastqc.zip, results/fastqc/ERR246969_R1_fastqc.zip, results/fastqc/ERR3077932_1.fastq.gz_R2_fastqc.html, results/fastqc/ERR246975_R2_fastqc.html, results/fastqc/ERR3077932_1.fastq.gz_R1_fastqc.html, results/fastqc/ERR246969_R2_fastqc.zip; Input files updated by another job: /Users/sg/Documents/micromake/results/data/ERR3077932_R1.fastq.gz, /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR3077932_R2.fastq.gz
+
+
+[Sun Jan  5 02:48:49 2025]
+Job 3: Running FASTP on /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq /Users/sg/Documents/micromake/results/data/ERR3077932_R1.fastq.gz /Users/sg/Documents/micromake/results/data/ERR3077932_R2.fastq.gz /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+Reason: Missing output files: /Users/sg/Documents/micromake/results/fastp/fastp.json, /Users/sg/Documents/micromake/results/fastp/ERR246969_R2.fastq, /Users/sg/Documents/micromake/results/fastp/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/fastp/ERR3077932_R1.fastq.gz, /Users/sg/Documents/micromake/results/fastp/ERR246975_R2.fastq, /Users/sg/Documents/micromake/results/fastp/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/fastp/ERR3077932_R2.fastq.gz, /Users/sg/Documents/micromake/results/fastp/fastp.html; Input files updated by another job: /Users/sg/Documents/micromake/results/data/ERR3077932_R1.fastq.gz, /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq, /Users/sg/Documents/micromake/temp/fastp_cmds.txt, /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR3077932_R2.fastq.gz
+
+[Sun Jan  5 02:49:39 2025]
+Finished job 3.
+3 of 5 steps (60%) done
+Removing temporary output /Users/sg/Documents/micromake/temp/fastp_cmds.txt.
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule fastqc in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 10:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/fastqc/ERR3077932_1.fastq.gz_R1_fastqc.html (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_2.fastq.gz_R1_fastqc.html (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_1.fastq.gz_R1_fastqc.zip (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_2.fastq.gz_R1_fastqc.zip (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_1.fastq.gz_R2_fastqc.html (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_2.fastq.gz_R2_fastqc.html (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_1.fastq.gz_R2_fastqc.zip (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+results/fastqc/ERR3077932_2.fastq.gz_R2_fastqc.zip (missing locally, parent dir contents: ERR3077932_R2_fastqc.zip, ERR246975_R1_fastqc.zip, ERR246969_R2_fastqc.zip, ERR3077932_R1_fastqc.html, ERR246975_R2_fastqc.html, ERR246969_R1_fastqc.zip, ERR246969_R2_fastqc.html, ERR246969_R1_fastqc.html, ERR3077932_R1_fastqc.zip, ERR246975_R2_fastqc.zip, ERR246975_R1_fastqc.html, ERR3077932_R2_fastqc.html)
+Removing output files of failed job fastqc since they might be corrupted:
+results/fastqc/ERR246975_R1_fastqc.html, results/fastqc/ERR246969_R1_fastqc.html, results/fastqc/ERR246975_R1_fastqc.zip, results/fastqc/ERR246969_R1_fastqc.zip, results/fastqc/ERR246975_R2_fastqc.html, results/fastqc/ERR246969_R2_fastqc.html, results/fastqc/ERR246975_R2_fastqc.zip, results/fastqc/ERR246969_R2_fastqc.zip, /Users/sg/Documents/micromake/results/fastqc
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-01-05T024153.571274.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

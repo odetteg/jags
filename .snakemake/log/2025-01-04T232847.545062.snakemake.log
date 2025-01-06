@@ -1,0 +1,51 @@
+host: sgodette.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+fastp                 1
+get_fastp_cmds        1
+total                 3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Jan  4 23:28:47 2025]
+localrule get_fastp_cmds:
+    output: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    jobid: 2
+    reason: Missing output files: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sat Jan  4 23:28:47 2025]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Jan  4 23:28:47 2025]
+Job 1: Running FASTP on /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+Reason: Missing output files: results/fastqc/ERR246969_R1.fastq, results/fastqc/ERR246975_R1.fastq, results/fastqc/ERR246975_R2.fastq, results/fastqc/ERR246969_R2.fastq; Input files updated by another job: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+
+[Sat Jan  4 23:28:47 2025]
+Error in rule fastp:
+    jobid: 1
+    input: /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq, /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq, /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    output: results/fastqc/ERR246969_R1.fastq, results/fastqc/ERR246969_R2.fastq, results/fastqc/ERR246975_R1.fastq, results/fastqc/ERR246975_R2.fastq
+    shell:
+        
+        while read -r cmds;do
+        $cmd
+        done < input.fastp_cmds_
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-01-04T232847.545062.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

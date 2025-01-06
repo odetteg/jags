@@ -1,0 +1,13 @@
+host: sgodette.local
+Building DAG of jobs...
+MissingInputException in rule all in file /Users/sg/Documents/micromake/Snakefile, line 4:
+Missing input files for rule all:
+    affected files:
+        results/fastqc/ERR3077932_1.fastq.gz_R1_fastqc.html
+        results/fastqc/ERR3077932_2.fastq.gz_R2_fastqc.zip
+        results/fastqc/ERR3077932_2.fastq.gz_R1_fastqc.html
+        results/fastqc/ERR3077932_1.fastq.gz_R2_fastqc.html
+        results/fastqc/ERR3077932_2.fastq.gz_R1_fastqc.zip
+        results/fastqc/ERR3077932_1.fastq.gz_R2_fastqc.zip
+        results/fastqc/ERR3077932_1.fastq.gz_R1_fastqc.zip
+        results/fastqc/ERR3077932_2.fastq.gz_R2_fastqc.html

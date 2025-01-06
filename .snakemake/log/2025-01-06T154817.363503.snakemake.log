@@ -1,0 +1,39 @@
+host: eduroam-prg-lm-1-18-196.net.univ-paris-diderot.fr
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+get_map_cmds        1
+total               2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan  6 15:48:17 2025]
+localrule get_map_cmds:
+    output: /Users/sg/Documents/micromake/temp/map.txt
+    jobid: 5
+    reason: Missing output files: /Users/sg/Documents/micromake/temp/map.txt
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Mon Jan  6 15:48:17 2025]
+Finished job 5.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan  6 15:48:17 2025]
+localrule all:
+    input: results/fastqc/ERR246975_R1_fastqc.html, results/fastqc/ERR3077932_R1_fastqc.html, results/fastqc/ERR246969_R1_fastqc.html, results/fastqc/ERR246975_R1_fastqc.zip, results/fastqc/ERR3077932_R1_fastqc.zip, results/fastqc/ERR246969_R1_fastqc.zip, results/fastqc/ERR246975_R2_fastqc.html, results/fastqc/ERR3077932_R2_fastqc.html, results/fastqc/ERR246969_R2_fastqc.html, results/fastqc/ERR246975_R2_fastqc.zip, results/fastqc/ERR3077932_R2_fastqc.zip, results/fastqc/ERR246969_R2_fastqc.zip, /Users/sg/Documents/micromake/results/fastp/ERR246975_R1.fastq, /Users/sg/Documents/micromake/results/fastp/ERR246969_R1.fastq, /Users/sg/Documents/micromake/results/fastp/ERR3077932_R1.fastq.gz, /Users/sg/Documents/micromake/results/fastp/ERR246975_R2.fastq, /Users/sg/Documents/micromake/results/fastp/ERR3077932_R2.fastq.gz, /Users/sg/Documents/micromake/results/fastp/ERR246969_R2.fastq, /Users/sg/Documents/micromake/results/fastp/fastp.json, /Users/sg/Documents/micromake/results/fastp/fastp.html, /Users/sg/Documents/micromake/temp/map.txt
+    jobid: 0
+    reason: Input files updated by another job: /Users/sg/Documents/micromake/temp/map.txt
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Mon Jan  6 15:48:17 2025]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2025-01-06T154817.363503.snakemake.log

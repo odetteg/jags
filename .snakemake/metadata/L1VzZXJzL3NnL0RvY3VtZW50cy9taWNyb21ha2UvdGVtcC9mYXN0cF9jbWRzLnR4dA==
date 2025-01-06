@@ -1,0 +1,1 @@
+{"record_format_version": 5, "code": null, "rule": "get_map_cmds", "input": [], "log": [], "params": [], "shellcmd": null, "incomplete": false, "starttime": 1736176650.5654109, "endtime": 1736176650.606857, "job_hash": 296228423, "conda_env": null, "software_stack_hash": "d41d8cd98f00b204e9800998ecf8427e", "container_img_url": null, "input_checksums": {}}

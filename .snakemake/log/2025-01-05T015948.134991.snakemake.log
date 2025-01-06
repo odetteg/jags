@@ -1,0 +1,77 @@
+host: sgodette.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+fastp                 1
+fastqc                1
+get_fastp_cmds        1
+laod_data             6
+total                10
+
+Select jobs to execute...
+Execute 7 jobs...
+
+[Sun Jan  5 01:59:48 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq
+    jobid: 4
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246969_R1.fastq
+    wildcards: sample=ERR246969_R1.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 01:59:48 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq
+    jobid: 5
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246969_R2.fastq
+    wildcards: sample=ERR246969_R2.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 01:59:48 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz
+    jobid: 6
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz
+    wildcards: sample=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R1.fastq.gz
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 01:59:48 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq
+    jobid: 2
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246975_R1.fastq
+    wildcards: sample=ERR246975_R1.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 01:59:48 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz
+    jobid: 7
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz
+    wildcards: sample=ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_R2.fastq.gz
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 01:59:48 2025]
+localrule get_fastp_cmds:
+    output: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    jobid: 9
+    reason: Missing output files: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+
+[Sun Jan  5 01:59:48 2025]
+localrule laod_data:
+    output: /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq
+    jobid: 3
+    reason: Missing output files: /Users/sg/Documents/micromake/results/data/ERR246975_R2.fastq
+    wildcards: sample=ERR246975_R2.fastq
+    resources: tmpdir=/var/folders/fk/ftbf2rrs5lv2cvwbp68vdv5r0000gn/T
+
+[Sun Jan  5 01:59:48 2025]
+Finished job 9.
+1 of 10 steps (10%) done

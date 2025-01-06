@@ -1,0 +1,3 @@
+Description
+The goal of this project is to characterize and prioritize both germline and somatic genomic variants identified in schwannomatosis patients (a rare cancer predisposition syndrome), and in doing so develop a pipeline that can be applied to related rare disease cohorts. Studies in this disease area generally focus on a few genes of interest and genome-wide analyses are deeply needed. Initial characterization will be limited to single nucleotide variants and small insertion/deletion variants, but may expand to include structural variants. We would prefer that the final pipeline be packaged as a tool that can be applied to other related datasets. Prioritized variants may then be utilized in additional analyses as part of our larger, community-based project.s
+

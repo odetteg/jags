@@ -1,0 +1,14 @@
+host: eduroam-prg-lm-1-18-196.net.univ-paris-diderot.fr
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules get_map_cmds and get_fastp_cmds are ambiguous for the file /Users/sg/Documents/micromake/temp/fastp_cmds.txt.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	get_map_cmds: 
+	get_fastp_cmds: 
+Expected input files:
+	get_map_cmds: 
+	get_fastp_cmds: 
+Expected output files:
+	get_map_cmds: /Users/sg/Documents/micromake/temp/fastp_cmds.txt
+	get_fastp_cmds: /Users/sg/Documents/micromake/temp/fastp_cmds.txt

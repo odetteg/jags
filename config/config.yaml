@@ -1,0 +1,2 @@
+snakefile: snakefile
+cores: 8
