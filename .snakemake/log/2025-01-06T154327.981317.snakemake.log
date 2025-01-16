@@ -1,4 +1,0 @@
-host: eduroam-prg-lm-1-18-196.net.univ-paris-diderot.fr
-Building DAG of jobs...
-MissingRuleException:
-No rule to produce workflows/rules/qc.smk (if you use input functions make sure that they don't raise unexpected exceptions).

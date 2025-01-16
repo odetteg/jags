@@ -1,4 +1,3 @@
 ERR246975
 ERR246969
-ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_1.fastq.gz
-ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR307/002/ERR3077932/ERR3077932_2.fastq.gz
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.26_GRCh38/GCF_000001405.26_GRCh38_genomic.fna.gz

@@ -1,5 +1,0 @@
-host: sgodette.local
-Building DAG of jobs...
-WildcardError in rule fastqc in file /Users/sg/Documents/micromake/workflows/rules/qc.smk, line 4:
-Wildcards in input files cannot be determined from output files: (rule fastqc, line 4, /Users/sg/Documents/micromake/workflows/rules/qc.smk)
-'ext'

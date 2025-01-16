@@ -3,7 +3,7 @@ set -u
 set -o pipefail
 accessions_file="links.txt"
 data_dir="results/data"
-mkdir -p $data_dir
+ref_dir="results/ref"
 
 # Downloading files when given a list of accession numbers
 accessions=()
@@ -15,11 +15,20 @@ for id in ${accessions[@]}; do
     if [[ "$id" == "SRR"* ||  "$id" == "ERR"* ]]; then
         fasterq-dump $id --split-files -O $data_dir
     elif [[ "$id" == "ftp://"* ]]; then 
-        out_dir=$(basename "$id")
         wget -nc -P "$data_dir" "$id"
+    elif [[ "$id" == *.fna.gz* || "$id" == *.fa.gz || "$id" == *.fasta* || "$id" == *fasta.gz ]]; then
+        wget -nc -P "$ref_dir" "$id"
+        ref_file=$(basename "$id")
+        ref_path="$ref_dir/$ref_file"
+        if file "$ref_path" | grep -q "BGZF"; then
+        echo "file in the correct format"
+        else 
+        base_name="$ref_dir/$(basename "$id" .gz)"
+        gunzip "$ref_path"
+        bgzip "$base_name"
+        fi
     else
-        echo "Invalid accession number"
-        exit 1
+        echo "Skipping download for $id"
     fi
 done
  

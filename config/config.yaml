@@ -1,2 +1,7 @@
 snakefile: snakefile
-cores: 8
+cores: 4
+fastp:
+  extra_params: 
+bwa:
+  bwa_mem:
+    extra_params: -t 8

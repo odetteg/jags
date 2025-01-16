@@ -4,7 +4,8 @@ from constants.common import *
 
 rule laod_data:
     output:
-        *getInputFiles()
+        *getInputFiles(),
+        get_ref_genome()
     script:
         download_script
 rule fastqc:
@@ -24,13 +25,13 @@ rule fastqc:
 
 rule get_fastp_cmds:
     output:
-        temp(cmds_dir + "/fastp_cmds.txt")
+        temp(cmds_dir + "/fastp.txt")
     run:
         fastp_cmds()
 rule fastp:
     input:
         *getInputFiles(),
-        fastp_cmds_= os.path.join(cmds_dir, "fastp_cmds.txt")
+        fastp_cmds_= os.path.join(cmds_dir, "fastp.txt")
     output:
         expand(str(base_dir) + "/results/fastp/{sample}", sample=exts_),
         expand(str(base_dir) + "/results/fastp/{rpt}", rpt=["fastp.json", "fastp.html"])
