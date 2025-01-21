@@ -17,9 +17,11 @@ rule index_fa:
             ext=["amb", "ann", "bwt", "pac", "sa"],
             ext_in_ref=ext_in_ref
         ),
+    log:
+        str(base_dir) + "/logs/index.log"
     shell:
         """
-        bwa index {input.ref_file}
+        bwa index {input.ref_file} >> {log} 2>&1
         """
 rule map:
     input:
@@ -44,6 +46,8 @@ rule map:
         )
     message:
         "Mapping reads..."
+    log:
+        str(base_dir) + "/logs/bwa.log"
     shell:
         """
         set -x 
@@ -58,6 +62,6 @@ rule map:
         for bam_file in {output.fastp_bam};do
         bam_in="${{bam_file%.sorted.bam}}.bam"
         samtools sort $bam_in -o $bam_file && samtools index $bam_file
-        done
+        done >> {log} 2>&1
         """
     

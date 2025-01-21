@@ -3,9 +3,9 @@ configfile: "config/config.yaml"
 include: "workflows/rules/qc.smk"
 include:  "workflows/rules/map.smk"
 include:  "workflows/rules/call.smk"
+include:  "workflows/rules/multiqc.smk"
 rule all:
     input:
-        expand(
-            str(results_dir) + "/variants/bcftools/fastp_{sample}.raw.vcf", sample=ids_
-        ),
-        
+        multiqc_dir,
+        report(
+            str(results_dir) + "/multiqc/multiqc_report.html", caption="report/multiqc.rst", category="Quality control"),

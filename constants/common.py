@@ -16,6 +16,7 @@ fastqc_dir=os.path.join(results_dir, "fastqc")
 cmds_dir=os.path.join(base_dir, "temp")
 ref_genome_dir = os.path.join(results_dir, "ref")
 download_script = os.path.join(base_dir, "workflows", "scripts", "download.sh")
+multiqc_dir = os.path.join(results_dir, "multiqc")
 # Assuming that all sample names are stored in a txt or csv file
 samples_df = pd.read_csv(os.path.join(base_dir, "links.txt"), header=None)
 sample_names = []

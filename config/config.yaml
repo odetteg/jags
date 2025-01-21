@@ -5,3 +5,6 @@ fastp:
 bwa:
   bwa_mem:
     extra_params: -t 8
+bcftools:
+  filter: QUAL > 20 && DP > 10
+

@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from constants.common import *
-
+configfile: "config/config.yaml"
 rule call:
     input:
         fastp_bam = expand(
@@ -28,16 +28,31 @@ rule call:
         bcftools call -mv -Ov -o $vcf_file
         done
         """
-# rule filter_variants:
-#     input:
-#         raw_vcfs= expand(
-#             str(results_dir) + "/variants/bcftools/fastp_{sample}.raw.vcf", sample=ids_
-#         )
-#     output:
-#         filtered_vcfs= expand(
-#             str(results_dir) + "/variants/bcftools/fastp_{sample}.filtered.vcf", sample=ids_
-#         )
-#     shell:
-#         """
-        
-#         """
+rule filter_variants:
+    input:
+        raw_vcfs= expand(
+            str(results_dir) + "/variants/bcftools/fastp_{sample}.raw.vcf", sample=ids_
+        )
+    output:
+        filtered_vcfs= expand(
+            str(results_dir) + "/variants/bcftools/fastp_{sample}.filtered.vcf", sample=ids_
+        ),
+        stats= expand(
+            str(results_dir) + "/variants/bcftools/fastp_{sample}.{type}.stats.txt", sample=ids_, type=["raw", "filtered"]
+        ),
+    params:
+        filter=config['bcftools']['filter']
+    log:
+        str(base_dir) + "/logs/bcftools.log"
+    shell:
+        """
+        set -x
+        for vcf_file in {input.raw_vcfs}; do
+        filtered_vcf="${{vcf_file/raw/filtered}}"
+        bcftools filter -Ov -o $filtered_vcf -i '{params.filter}' $vcf_file >> {log}
+        raw_stats="${{vcf_file%.vcf}}.stats.txt"
+        filtered_stats="${{vcf_file%.raw.vcf}}.filtered.stats.txt"
+        bcftools stats $vcf_file > $raw_stats 
+        bcftools stats $filtered_vcf > $filtered_stats 
+        done  >> {log} 2>&1
+        """
